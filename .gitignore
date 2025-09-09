@@ -1,2 +1,14 @@
+# Python
 venv/
+__pycache__/
+*.pyc
+
+# R
 .Rhistory
+.RData
+.Rproj.user
+
+# Data
+data/*.csv
+data/*.db
+
