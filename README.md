@@ -1,2 +1,1 @@
-# ensa-year1-portfolio
-ENSA Year1 portfolio — Cybersécurité &amp; IA (ENSA Béni Mellal)
+# ENSA Year1 Portfolio — ENSA Béni Mellal
