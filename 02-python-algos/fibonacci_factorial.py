@@ -1,5 +1,5 @@
-# algos.py
-# First Python script for ENSA Year 1 porttfolio
+# A factorial and fibonacci function code 
+
 
 #factorial function
 def factorial(n):

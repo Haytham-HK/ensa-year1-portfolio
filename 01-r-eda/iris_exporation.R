@@ -1,5 +1,4 @@
-# Exploratory Data Analysis_intro.R
-#First R script for ENSA Year 1 portofolio
+#A simple code to explor the iris dataset
 
 #First lets load built-in dataset 
 data(iris)

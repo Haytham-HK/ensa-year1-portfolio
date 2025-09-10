@@ -1,5 +1,4 @@
--- Students_Schema.sql
---for ensa portfolio year 1
+--Students schema on sql
 
 -- Create a table to store students info
 CREATE TABLE students (
