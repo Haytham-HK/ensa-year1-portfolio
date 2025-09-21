@@ -10,7 +10,7 @@ Enter a city name (e.g. `Casablanca`) and the CLI converts the city to latitude/
 python -m venv .venv
 source .venv/bin/activate        # Windows: .venv\\Scripts\\activate
 pip install -r requirements.txt
-python weather_cli.py "New York"  # or run interactively
+python weather_cli.py 
 \`\`\`
 
 ## How I built it
