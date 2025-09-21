@@ -1,4 +1,8 @@
-# pip install openmeteo-requests
+"""
+weather_cli.py
+Author: Haytham HK
+Date: 2025-09-21
+"""
 import openmeteo_requests
 from geopy.geocoders import Nominatim
 

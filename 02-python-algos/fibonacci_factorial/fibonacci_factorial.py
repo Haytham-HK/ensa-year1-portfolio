@@ -19,8 +19,9 @@ def fibonacci(n):
    return seq
 
 
-#test 
-if __name__ == "__main__":
- print("Factorial of 5 :" , factorial(5))
- print("First 10 fibonacci numbers : " , fibonacci(10))  
+n = input ("enter your number : ")
+fact = factorial(int(n))
+fib = fibonacci(int(n))
+print(f'the factorial of {n} is {fact}')
+print(f'the fibonacci of {n} is {fib}')
 
