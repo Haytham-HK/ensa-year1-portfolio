@@ -1,8 +1,3 @@
-A small Python CLI I built to practice working with web APIs and geocoding.
-Enter a city name (e.g. `Casablanca`) and the CLI converts the city to latitude/longitude using Geopy (Nominatim) and then requests the current temperature from the free Open-Meteo API.
-
-
-
 # Weather CLI
 
 A small Python CLI I built to practice working with web APIs and geocoding.
