@@ -16,4 +16,3 @@ python weather_cli.py
 ## How I built it
 - Researched scraping vs APIs; chose Open-Meteo because it's free and simple.
 - Used `geopy` + Nominatim for geocoding.
-- Added basic error handling and a small unit test (optional).
