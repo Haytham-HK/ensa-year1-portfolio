@@ -1,0 +1,3 @@
+CREATE USER tp_user WITH PASSWORD 'tp_pass';
+CREATE DATABASE tp_store OWNER tp_user;
+GRANT ALL PRIVILEGES ON DATABASE tp_store TO tp_user;
