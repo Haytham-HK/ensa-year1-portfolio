@@ -1,0 +1,3 @@
+
+openmeteo-requests
+geopy>=2.0

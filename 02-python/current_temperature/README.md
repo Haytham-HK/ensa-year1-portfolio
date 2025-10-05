@@ -4,6 +4,11 @@ A small Python CLI I built to practice working with web APIs and geocoding.
 
 ## What it does
 Enter a city name and the CLI converts the city to latitude/longitude using Geopy (Nominatim) and then requests the current temperature from the free Open-Meteo API.
+## Requirements
+
+- Python 3.8+
+- `openmeteo_requests`
+- `geopy`
 
 # create  virtualenv
 python -m venv .venv
