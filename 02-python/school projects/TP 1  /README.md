@@ -9,8 +9,11 @@ L'objectif principal de ce TP est de maîtriser l'installation et la configurati
 ##  Objectifs Pédagogiques
 
 Ce TP a été conçu pour :
+
 1- Installer un environnement Python fonctionnel via la distribution **Anaconda**.
+
 2- Se familiariser avec l'IDE .
+
 3- Exécuter les premières lignes de code et valider l'installation.
 
 ---
