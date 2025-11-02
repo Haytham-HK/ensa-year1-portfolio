@@ -1,6 +1,6 @@
 # TP03 — Python: Algorithmic Exercices
 
-This folder contains a collection of Python exercices focused on algorithms, number theory, and problem-solving. Each exercice is separated into its own project with a `main.py` entry point.
+This folder contains a collection of Python exercices focused on algorithms, number theory, and problem-solving.
 
 ## Prerequisites
 - Python 3.x installed.
