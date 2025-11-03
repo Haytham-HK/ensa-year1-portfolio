@@ -3,13 +3,12 @@ Note <- c (12, 15, 18, 14, 16, 19, 17, 15, 14, 18)
 
 #1
 hist(Note,
-     main = "Histograme des Note",
-     xlab = "valeur",
-     ylab = "Frequence")
+     main = "Grade histogram",
+     xlab = "values",
+     ylab = "Frequecy")
 
 #2
 boxplot(Note,
-        main ="Boite a mustaches",
-        ylab ="valeur")
+        main ="scatter plot",
+        ylab ="values")
 
-#il nexiste pas de valeur aberante
