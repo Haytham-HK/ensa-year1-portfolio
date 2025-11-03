@@ -3,12 +3,12 @@ Note <- c (12, 15, 18, 14, 16, 19, 17, 15, 14, 18)
 
 #1
 hist(Note,
-     main = "Grade histogram",
+     main = "hist",
      xlab = "values",
      ylab = "Frequecy")
 
 #2
 boxplot(Note,
-        main ="scatter plot",
+        main ="boxplot",
         ylab ="values")
 
