@@ -1,36 +1,37 @@
-# R Initiation Practical (TP 1)
+# R Initiation Practical (TP 2)
 
-This repository contains a documented R script based on a university practical session (TP 2) for an introductory course on R related to statisctics.
+This first session of practical work introduces the fundamental concepts of R Descriptive statistics. These concepts form the basis for statistical analyses. more advanced which i will study in the following sessions.
 
-The script serves as a hands-on guide to the fundamental concepts and commands in the R programming language related to statisctics.
-
-## Exercices :
-
-## Exercice 1 : Statistiques Descriptives Simples
-Considérez l’ensemble de données suivant représentant les notes d’examens (sur 20) de 10
-étudiants :
-Notes: 12, 15, 18, 14, 16, 19, 17, 15, 14, 18
-1. Créer un vecteur contenant ces données
-2. Calculer la moyenne, la médiane et l’écart-type
-3. Déterminer l’étendue et l’écart interquartile
-4. Afficher un résumé statistique complet
+## Introduction : introduction to R in relation with statistics (introduction.R)
+Just an inroduction to R commands in relation with statistics and estimation, to understand the basic command . 
 
 
-## Exercice 2 : Visualisation des Données
-En utilisant les mêmes données de l’exercice 1 :
-1. Créer un histogramme des notes
-2. Créer une boı̂te à moustaches
-3. Ajouter des titres et labels appropriés à chaque graphique
-4. Interpréter les visualisations
-5. Identifier les valeurs aberrantes, s’il y en a
+## Exercice 1 : Statistiques Descriptives Simples (exercice_1.R)
+Consider the following dataset representing exam scores (out of 20) of 10 Students: 
+Notes: 12, 15, 18, 14, 16, 19, 17, 15, 14, 18 
+
+1. Create a vector containing this data 
+2. Calculate the mean, median, and standard deviation 
+3. Determine range and interquartile range 
+4. View a complete statistical summary
 
 
-## Exercice 3 : Analyse de Plusieurs Variables
-Créez un dataframe contenant les données de 5 produits avec les colonnes suivantes :
-— Nom du produit
-— Ventes (en milliers d’unités) : 45, 52, 38, 61, 55
-— Prix (en $) : 25, 30, 20, 35, 28
-1. Créer le dataframe
-2. Calculer les statistiques descriptives pour chaque colonne numérique
-3. Tracer un diagramme de dispersion entre les ventes et le prix
-4. Commenter la relation entre les deux variables
+## Exercice 2 : Visualisation des Données  (exercice_2.R)
+Using the same data from exercise 1: 
+1. Create a Grade Histogram 
+2. Create a whisker box 
+3. Add appropriate titles and labels to each chart 
+4. Interpret visualizations 
+5. Identify outliers, if any
+
+
+## Exercice 3 : Analyse de Plusieurs Variables  (exercice_3.R)
+Create a dataframe containing data from 5 products with the following columns: 
+Product Name : P1,P2,P3,P4,P5
+Sales (in thousands of units): 45, 52, 38, 61, 55 
+Price ($): 25, 30, 20, 35, 28 
+
+1. Create the dataframe 
+2. Calculate descriptive statistics for each numeric column 
+3. Draw a scatter plot between sales and price 
+4. Comment on the relationship between the two variables
