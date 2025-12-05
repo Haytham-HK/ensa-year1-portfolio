@@ -1,7 +1,9 @@
 # ENSA Year 1 Portfolio
 
 **Student:** Haytham HK
+
 **Focus:** Cybersecurity & AI
+
 **Institution:** ENSA Béni Mellal
 
 ## Overview
