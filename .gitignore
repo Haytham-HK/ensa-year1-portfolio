@@ -1,14 +1,22 @@
 # Python
-venv/
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.env
 
 # R
 .Rhistory
 .RData
-.Rproj.user
+.Ruserdata
 
-# Data
-data/*.csv
-data/*.db
+# OS Generated Files
+.DS_Store
+Thumbs.db
 
+# IDE Settings (Optional but recommended)
+.vscode/
+.idea/

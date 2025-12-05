@@ -1,10 +1,20 @@
-# ENSA Year1 Portfolio — ENSA Béni Mellal
+# ENSA Year 1 Portfolio
 
-This repository hosts weekly artifacts for my Cybersecurity & AI studies:
-- 01-r: Simple R projects
-- 02-python: Python projects
-- 03-sql: SQL Projects
+**Student:** Haytham KENNOUZ
 
+**Focus:** Cybersecurity & AI
 
-Contact: kennouzhaytham@gmail.com
-Portfolio: https://github.com/Haytham-HK/ensa-year1-portfolio
+**Institution:** ENSA Béni Mellal
+
+## Overview
+This repository contains coursework, labs, and projects from my first year of engineering studies. The focus is on foundational programming, data structures, and database management systems.
+
+## Languages
+* Python: Scripting and algorithms.
+* SQL: Relational database management.
+* R: Statistical analysis.
+
+## Repository Content
+* /01-r: Statistical computing scripts.
+* /02-python: General purpose scripting and algorithmic problem solving.
+* /03-sql: Database schemas, query logic, and normalization exercises.
