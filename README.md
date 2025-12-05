@@ -1,6 +1,6 @@
 # ENSA Year 1 Portfolio
 
-**Student:** Haytham HK
+**Student:** Haytham KENNOUZ
 
 **Focus:** Cybersecurity & AI
 
