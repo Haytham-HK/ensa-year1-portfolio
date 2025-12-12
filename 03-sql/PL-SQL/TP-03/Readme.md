@@ -1,8 +1,5 @@
 # TP04: PL/SQL Cursors
 
-**Institution:** ENSA Beni Mellal (ENSA-BM)
-**Course:** Database - PL/SQL
-
 ## Overview
 This lab (Travaux Pratiques) focuses on mastering Cursors in PL/SQL. The primary goal is to understand the difference between implicit and explicit cursors and how to manipulate them effectively using Oracle Database.
 
