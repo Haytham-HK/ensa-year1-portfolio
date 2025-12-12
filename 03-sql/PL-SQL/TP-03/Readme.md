@@ -33,7 +33,7 @@ Increase Dept 30 salaries by 10%. Log how many rows were updated .
 ### Ex 2.1: 
 create c_emp to fetch ename, sal, deptno. Use manual OPEN, FETCH loop, and CLOSE. Display results .
 ### Ex 2.2:
-Add a manual counter variable to Ex 2.1. Compare it against c_emp%ROWCOUNT at the end .
+Add a manual counter variable .
 ## Part 3: %ROWTYPE
 ### Ex 3.1: 
 Create c_dep10 for Dept 10 using SELECT Fetch into a %ROWTYPE variable and display details .
