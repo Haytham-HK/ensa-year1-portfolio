@@ -1,0 +1,34 @@
+﻿,TABLEAU 1: OBSERVE (DONNEES)
+Origine,Aude,Hérault,Gard,Lozère,PO,Total
+Espagne,6543,10100,18743,244,24014,59644
+Maroc,3085,14376,12805,700,3365,34331
+Algérie,2730,8932,6312,151,5029,23154
+Portugal,752,2178,2302,1523,2836,9591
+Italie,1036,2541,2212,114,689,6592
+Total,14146,38127,42374,2732,35933,133312
+
+,TABLEAU 2: THEORIQUE (Q1 & Q7),,,,,
+Origine,Aude,Hérault,Gard,Lozère,PO,
+Espagne,6328.94,17058.08,18958.19,1222.30,16076.48,
+Maroc,3642.93,9818.61,10912.31,703.55,9253.60,
+Algérie,2456.92,6622.00,7359.63,474.50,6240.94,
+Portugal,1017.72,2743.01,3048.56,196.55,2585.16,
+Italie,699.49,1885.30,2095.31,135.09,1776.81,
+
+,TABLEAU 3: TAUX DE LIAISON (Q2),,,,,
+Origine,Aude,Hérault,Gard,Lozère,PO,
+Espagne,1.03,0.59,0.99,0.20,1.49,
+Maroc,0.85,1.46,1.17,0.99,0.36,
+Algérie,1.11,1.35,0.86,0.32,0.81,
+Portugal,0.74,0.79,0.76,7.75,1.10,
+Italie,1.48,1.35,1.06,0.84,0.39,
+
+,RESULTATS STATISTIQUES (Q1 Q3 Q5),,,,,
+Metrique,Valeur,Conclusion,,,,
+Khi-deux (Chi2),25677.85,Dépendance Forte (P < 0.05),,,,
+Degrés de liberté,16,,,,,
+Phi-carré,0.19261,,,,,
+Cramer V,0.21944,,,,,
+
+,conclusion,,,,,
+,L'analyse montre une forte dépendance. L'axe 1 sépare nettement la Lozère (forte immigration portugaise). L'axe 2 distingue les Pyrénées-Orientales (forte immigration espagnole)
