@@ -1,4 +1,4 @@
-# TP 2 :
+# TP 2 : Python Logic
 
 A collection of simple Python scripts and algorithm exercises. Each script is a standalone exercice.
 

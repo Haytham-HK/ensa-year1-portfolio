@@ -1,6 +1,6 @@
-# Introduction to Machine Learning (Scikit-Learn)
+# Introduction to Machine Learning (Scikit-Learn) 
 
-This repository contains a collection of four introductory scikit projects implemented in Python. They demonstrate the fundamental concepts of supervised learning: **Regression** (predicting values) and **Classification** (predicting categories).
+This repository contains a collection of four introductory scikit projects implemented in Python. They demonstrate the fundamental concepts of supervised learning: **Regression** (predicting values) and **Classification** (predicting categories). Created under my prof's guidance as a presentation on the library.
 
 Each project includes a Jupyter Notebook (`.ipynb`) and a corresponding dataset (`.csv`).
 

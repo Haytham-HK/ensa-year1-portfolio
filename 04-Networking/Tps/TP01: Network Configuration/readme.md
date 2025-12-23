@@ -1,6 +1,6 @@
 # TP01: Linux Network Configuration
 
-**Goal**: Learn how to manually configure network interfaces, manage routing tables, and troubleshoot connectivity on a Linux system.
+**Goal:** Learn how to manually configure network interfaces, manage routing tables, and troubleshoot connectivity on a Linux system.
 
 ---
 
