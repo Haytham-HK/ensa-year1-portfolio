@@ -93,9 +93,28 @@ EXCEPTION
 END;
 /
 
+-- Function to get total points for a driver
+
+CREATE OR REPLACE FUNCTION get_driver_points(p_driver_id IN NUMBER) 
+RETURN NUMBER IS
+    v_total NUMBER := 0;
+BEGIN
+    -- summing the points 
+    SELECT SUM(points)
+    INTO v_total
+    FROM race_results
+    WHERE id_driver = p_driver_id;
+    
+    -- handle when driver hasent raced yet in a race
+    IF v_total IS NULL THEN
+        v_total := 0;
+    END IF;
+    
+    RETURN v_total;
+END;
+/
 -- 4. PROJECT TEST
 
-SET SERVEROUTPUT ON;
 DECLARE
     v_points NUMBER;
 BEGIN
@@ -103,8 +122,12 @@ BEGIN
     INSERT INTO constructors (name, principal, base_city, budget_cap) VALUES ('Williams', 'James Vowles', 'Grove', 135000000);
     COMMIT;
     
-    -- Test: Transfer Sainz (55) to Williams
+    -- Move Sainz to Williams
     transfer_driver(55, 'Williams');
 
+    -- Get points for Verstappen (ID 1)
+    v_points := get_driver_points(1); 
+    
+    DBMS_OUTPUT.PUT_LINE('Total Points: ' || v_points);
 END;
 /
