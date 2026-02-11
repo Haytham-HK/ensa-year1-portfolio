@@ -1,3 +1,3 @@
 # Formation
 
-This repository contains practical work related to trainings that i took apart in in my first year.
+This repository contains practical work related to the training I took part in during my first year
