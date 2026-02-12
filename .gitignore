@@ -16,7 +16,5 @@ venv/
 # OS Generated Files
 .DS_Store
 Thumbs.db
-
-# IDE Settings (Optional but recommended)
-.vscode/
+.vscode
 .idea/
