@@ -28,5 +28,4 @@ We conceptually explored more complex deployment scenarios, understanding the di
 This TP provided a foundational understanding of OpenStack, from rapid deployment with MicroStack to an appreciation for the complexities of its architecture through exploring DevStack and manual installation concepts. We gained valuable hands-on experience with cloud infrastructure management.
 
 **Course:** Cloud Computing & Virtualization  
-**Institution:** ENSA (First Year)  
-**Academic Year:** 2025/2026
+
