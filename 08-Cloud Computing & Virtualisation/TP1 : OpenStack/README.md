@@ -17,7 +17,7 @@ We navigated and utilized the OpenStack Horizon dashboard, gaining practical exp
 - Managing compute resources, including key pairs, images, and launching instances.
 
 **Evidence of Horizon Dashboard usage:**
- ![OpenStack Horizon Dashboard Overview](screenshot.png)
+ ![OpenStack Horizon Dashboard Overview](Screenshot_open.png)
 
 ### Advanced Deployment Methods (Conceptual Exploration)
 We conceptually explored more complex deployment scenarios, understanding the differences between:
