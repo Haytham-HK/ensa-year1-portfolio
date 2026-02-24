@@ -29,3 +29,4 @@ This TP provided a foundational understanding of OpenStack, from rapid deploymen
 
 **Course:** Cloud Computing & Virtualization  
 
+**Student:** Haytham KENNOUZ

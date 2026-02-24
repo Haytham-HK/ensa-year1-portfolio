@@ -64,3 +64,5 @@ streamlit run app.py
 3. **Use Tools**:
    - To search: Type "Search for the latest AI news".
    - To email: Type "Send an email to user@example.com saying..."
+
+**Student:** Haytham KENNOUZ   

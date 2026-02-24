@@ -36,3 +36,5 @@ awslocal s3 ls
 2026-02-12 16:23:48 bucket1
 
 ![List Buckets](./screenshots/list-buckets.png)
+
+**Student:** Haytham KENNOUZ

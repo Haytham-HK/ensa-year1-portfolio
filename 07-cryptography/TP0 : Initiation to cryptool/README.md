@@ -30,3 +30,6 @@ A polyalphabetic substitution method that uses a keyword to shift letters, makin
     * Install CrypTool 2.
     * Open the .cwm file to view the node-based logic graph.
     * Click "Play" to execute the encryption workflow.
+
+
+**Student:** Haytham KENNOUZ

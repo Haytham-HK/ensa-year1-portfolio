@@ -35,3 +35,4 @@ This practical exercise introduces the basics of machine learning by implementin
 ---
 
 
+**Student:** Haytham KENNOUZ
