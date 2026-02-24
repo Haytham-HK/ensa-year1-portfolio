@@ -1,9 +1,0 @@
-com/ecommerce/monolith/product/model/Product$ProductBuilder.class
-com/ecommerce/monolith/category/model/Category$CategoryBuilder.class
-com/ecommerce/monolith/product/service/ProductService.class
-com/ecommerce/monolith/product/controller/ProductController.class
-com/ecommerce/monolith/MonolithApplication.class
-com/ecommerce/monolith/category/model/Category.class
-com/ecommerce/monolith/product/repository/ProductRepository.class
-com/ecommerce/monolith/category/repository/CategoryRepository.class
-com/ecommerce/monolith/product/model/Product.class

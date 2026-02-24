@@ -1,7 +1,0 @@
-/home/hk/ensa-year1-portfolio/05-Architecture Logicielle/tp1 : monolith/monolith/src/main/java/com/ecommerce/monolith/product/service/ProductService.java
-/home/hk/ensa-year1-portfolio/05-Architecture Logicielle/tp1 : monolith/monolith/src/main/java/com/ecommerce/monolith/category/repository/CategoryRepository.java
-/home/hk/ensa-year1-portfolio/05-Architecture Logicielle/tp1 : monolith/monolith/src/main/java/com/ecommerce/monolith/product/controller/ProductController.java
-/home/hk/ensa-year1-portfolio/05-Architecture Logicielle/tp1 : monolith/monolith/src/main/java/com/ecommerce/monolith/MonolithApplication.java
-/home/hk/ensa-year1-portfolio/05-Architecture Logicielle/tp1 : monolith/monolith/src/main/java/com/ecommerce/monolith/product/model/Product.java
-/home/hk/ensa-year1-portfolio/05-Architecture Logicielle/tp1 : monolith/monolith/src/main/java/com/ecommerce/monolith/category/model/Category.java
-/home/hk/ensa-year1-portfolio/05-Architecture Logicielle/tp1 : monolith/monolith/src/main/java/com/ecommerce/monolith/product/repository/ProductRepository.java
