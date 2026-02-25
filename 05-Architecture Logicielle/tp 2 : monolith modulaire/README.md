@@ -8,7 +8,7 @@
     -   Lombok and MapStruct compatibility was ensured by configuring `lombok-mapstruct-binding` in Maven.
     -   Application startup clarity was improved by explicitly defining the `mainClass` in `pom.xml` for the `spring-boot-maven-plugin`.
 
-## how to run
+## How to run
 
 For those looking to run or explore this application:
 
