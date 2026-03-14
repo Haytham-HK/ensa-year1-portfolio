@@ -6,7 +6,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score, mean_squared_error
 
 # 2- Importer la dataset Salary_Data
-dataset = pd.read_csv('Salary_Data.csv')
+dataset = pd.read_csv("Salary_Data.csv")
 
 # 3- Spécifier X et y
 X = dataset.iloc[:, :-1].values
@@ -24,14 +24,14 @@ y_pred = regressor.predict(X_test)
 
 # 7- Prédire le salaire pour 15 ans d’expérience
 salaire_15 = regressor.predict([[15]])
-print(f"Salaire pour 15 ans d'expérience : {salaire_15[0]:.2f}")
+print(f"Salaire pour 15 ans d'expérience : {salaire_15[0]:.2}")
 
 # 8 & 9- Visualisation
-plt.scatter(X_test, y_test, color='red', label='Données Réelles')
-plt.plot(X_train, regressor.predict(X_train), color='blue', label='Modèle')
-plt.title('Salaire vs Expérience')
+plt.scatter(X_test, y_test, color="red", label="Données Réelles")
+plt.plot(X_train, regressor.predict(X_train), color="blue", label="Modèle")
+plt.title("Salaire vs Expérience")
 plt.xlabel("Années d'expérience")
-plt.ylabel('Salaire')
+plt.ylabel("Salaire")
 plt.legend()
 plt.show()
 
