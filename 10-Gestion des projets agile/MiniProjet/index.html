@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Eco - Signalement</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        h2 {
+            margin-top: 0;
+            color: #2c3e50;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #34495e;
+        }
+        select, input, textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        button {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #219150;
+        }
+        #message {
+            margin-top: 1rem;
+            padding: 0.75rem;
+            border-radius: 4px;
+            display: none;
+            text-align: center;
+        }
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Signaler un Problème</h2>
+    <form id="signalementForm">
+        <div class="form-group">
+            <label for="typeProbleme">Type de Problème</label>
+            <select id="typeProbleme" required>
+                <option value="">-- Sélectionner --</option>
+                <option value="Gaspillage énergie">Gaspillage énergie</option>
+                <option value="Fuite eau">Fuite eau</option>
+                <option value="Salle éclairée">Salle éclairée</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="lieu">Lieu</label>
+            <input type="text" id="lieu" placeholder="Ex: Bâtiment C, Salle 102" required>
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea id="description" placeholder="Détaillez le problème constaté..." required></textarea>
+        </div>
+        <button type="submit">Envoyer le Signalement</button>
+    </form>
+    <div id="message"></div>
+</div>
+
+<script>
+    const form = document.getElementById('signalementForm');
+    const messageDiv = document.getElementById('message');
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const data = {
+            typeProbleme: document.getElementById('typeProbleme').value,
+            lieu: document.getElementById('lieu').value,
+            description: document.getElementById('description').value
+        };
+
+        try {
+            const response = await fetch('http://localhost:8080/api/signalements', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+
+            if (response.ok) {
+                const result = await response.json();
+                const suggestion = result.suggestion;
+                
+                alert(`Suggestion Eco-responsable : \n\n${suggestion}`);
+                
+                showMessage('Signalement envoyé avec succès !', 'success');
+                form.reset();
+                
+                // Redirect to dashboard
+                setTimeout(() => {
+                    window.location.href = 'dashboard.html';
+                }, 500);
+            } else {
+                showMessage('Erreur lors de l\'envoi du signalement.', 'error');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            showMessage('Impossible de contacter le serveur.', 'error');
+        }
+    });
+
+    function showMessage(text, type) {
+        messageDiv.textContent = text;
+        messageDiv.className = type;
+        messageDiv.style.display = 'block';
+        setTimeout(() => {
+            messageDiv.style.display = 'none';
+        }, 5000);
+    }
+</script>
+
+</body>
+</html>

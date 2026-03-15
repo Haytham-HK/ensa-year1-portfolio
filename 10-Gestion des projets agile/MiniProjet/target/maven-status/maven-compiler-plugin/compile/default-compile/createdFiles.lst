@@ -1,0 +1,5 @@
+com/example/campuseco/entity/Signalement.class
+com/example/campuseco/service/SuggestionService.class
+com/example/campuseco/CampusEcoApplication.class
+com/example/campuseco/controller/SignalementController.class
+com/example/campuseco/repository/SignalementRepository.class
