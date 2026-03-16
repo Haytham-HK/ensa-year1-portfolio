@@ -1,0 +1,22 @@
+# Virtual Environment
+venv/
+.env
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Large model files (optional: keep if small)
+# *.pkl
+
+# Visualization outputs
+# model_performance.png
