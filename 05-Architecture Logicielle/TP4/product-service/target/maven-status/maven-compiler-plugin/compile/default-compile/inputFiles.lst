@@ -1,0 +1,6 @@
+/home/hk/ensa-year1-portfolio/05-Architecture Logicielle/TP4/product-service/src/main/java/com/ecommerce/productservice/controller/ProductController.java
+/home/hk/ensa-year1-portfolio/05-Architecture Logicielle/TP4/product-service/src/main/java/com/ecommerce/productservice/model/Product.java
+/home/hk/ensa-year1-portfolio/05-Architecture Logicielle/TP4/product-service/src/main/java/com/ecommerce/productservice/exception/RestExceptionHandler.java
+/home/hk/ensa-year1-portfolio/05-Architecture Logicielle/TP4/product-service/src/main/java/com/ecommerce/productservice/ProductServiceApplication.java
+/home/hk/ensa-year1-portfolio/05-Architecture Logicielle/TP4/product-service/src/main/java/com/ecommerce/productservice/service/ProductService.java
+/home/hk/ensa-year1-portfolio/05-Architecture Logicielle/TP4/product-service/src/main/java/com/ecommerce/productservice/repository/ProductRepository.java
