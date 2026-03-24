@@ -102,3 +102,4 @@
 2026-03-22T15:50:55.448+01:00  INFO 882532 --- [api-gateway] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2026-03-22T15:55:55.457+01:00  INFO 882532 --- [api-gateway] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2026-03-22T16:00:55.459+01:00  INFO 882532 --- [api-gateway] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-22T16:05:55.460+01:00  INFO 882532 --- [api-gateway] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

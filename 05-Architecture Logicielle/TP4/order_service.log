@@ -106,10 +106,8 @@ Hibernate: insert into orders (order_date,product_id,product_name,quantity,statu
 2026-03-22T15:49:56.312+01:00  INFO 889502 --- [order-service] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2026-03-22T15:54:56.313+01:00  INFO 889502 --- [order-service] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2026-03-22T15:59:56.314+01:00  INFO 889502 --- [order-service] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
- DiscoveryClient
-2026-03-22T15:48:27.082+01:00  INFO 892098 --- [order-service] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-03-22T16:04:56.315+01:00  INFO 889502 --- [order-service] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+Context. To display the condition evaluation report re-run your application with 'debug' enabled.
 2026-03-22T15:48:27.110+01:00 ERROR 892098 --- [order-service] [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
 
 ***************************

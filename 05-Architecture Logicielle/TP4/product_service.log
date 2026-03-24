@@ -108,3 +108,4 @@ Hibernate: select p1_0.id,p1_0.description,p1_0.name,p1_0.price,p1_0.stock from 
 2026-03-22T15:51:32.135+01:00  INFO 890351 --- [product-service] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2026-03-22T15:56:32.136+01:00  INFO 890351 --- [product-service] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2026-03-22T16:01:32.137+01:00  INFO 890351 --- [product-service] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-03-22T16:06:32.139+01:00  INFO 890351 --- [product-service] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
