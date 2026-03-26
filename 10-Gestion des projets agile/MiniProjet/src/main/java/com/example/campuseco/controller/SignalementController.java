@@ -54,4 +54,14 @@ public class SignalementController {
     public List<Signalement> getAllSignalements() {
         return signalementRepository.findAll();
     }
+
+    @GetMapping("/stats")
+    public Map<String, Long> getStats() {
+        List<Object[]> results = signalementRepository.countByStatus();
+        Map<String, Long> stats = new HashMap<>();
+        for (Object[] result : results) {
+            stats.put((String) result[0], (Long) result[1]);
+        }
+        return stats;
+    }
 }
