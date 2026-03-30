@@ -1,0 +1,19 @@
+# Root-level requirements for Python projects in this portfolio.
+# Individual project requirements are in their respective folders.
+
+# Data Science & Machine Learning (used across 02-python scikit-projects and 06-Machine Learning)
+numpy
+pandas
+scikit-learn
+matplotlib
+seaborn
+jupyter
+
+# Weather CLI projects (02-python/My projects)
+openmeteo-requests
+geopy>=2.0
+
+# RAG Workshop (00-Formation/ai-rag-workshop)
+streamlit
+langchain
+qdrant-client
