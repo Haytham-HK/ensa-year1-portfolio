@@ -7,11 +7,30 @@ __pycache__/
 env/
 venv/
 .env
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+pip-wheel-metadata/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
 
 # R
 .Rhistory
 .RData
 .Ruserdata
+
+# Java / Maven
+target/
+*.class
+*.jar
+*.war
+
+# Node.js
+node_modules/
+npm-debug.log*
 
 # OS Generated Files
 .DS_Store
