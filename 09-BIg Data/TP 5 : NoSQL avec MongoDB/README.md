@@ -6,77 +6,74 @@ Ce projet documente la réalisation du TP 5 portant sur l'utilisation de **Mongo
 
 - **Base de données :** MongoDB (NoSQL orienté document)
 - **Interface :** MongoDB Shell (mongosh)
-- **Concepts :** CRUD, Opérateurs de filtrage, Indexation, Framework d'agrégation, Validation de schéma.
+- **Concepts :** CRUD, Opérateurs de filtrage, Indexation, Framework d'agrégation, Validation de schéma (JSON Schema).
 
 ## Travail Réalisé
 
-### 1. Configuration et État initial
-Nous avons commencé par vérifier que le service MongoDB était opérationnel sur le système.
+### 1. Configuration et État du Service
+Vérification du statut du service MongoDB pour s'assurer qu'il est opérationnel.
 
-![État MongoDB](screens/01_MongoDB_Status_Active.png)
+![Statut Mongod](screens/01_Status_Service_Mongod.png)
 
 ### 2. Insertion de Données
-Nous avons exploré les méthodes d'insertion de documents (`insertOne` et `insertMany`) pour peupler notre collection d'alertes.
+Exploration des méthodes d'insertion pour peupler la collection `alertes`.
 
-- **Insertion unique :**
-![InsertOne](screens/02_InsertOne_Alerte_Intrusion.png)
+- **Insertion d'une alerte critique :**
+![InsertOne Alerte](screens/02_InsertOne_Alerte_Critique.png)
 
-- **Insertion multiple :**
-![InsertMany](screens/03_InsertMany_Alertes.png)
+- **Résultat d'une insertion multiple (insertMany) :**
+![InsertMany Résultat](screens/03_InsertMany_Alertes_Resultat.png)
 
-### 3. Consultation et Filtrage
-Utilisation de `find()` avec des projections et des opérateurs pour extraire des informations spécifiques.
+### 3. Requêtes de Recherche et Filtrage
+Utilisation de `find()` avec des projections et des opérateurs logiques.
 
-- **Nombre total de documents :**
-![Count](screens/04_Count_Documents_Total.png)
+- **Comptage du nombre total d'alertes :**
+![Count Documents](screens/04_CountDocuments_Total_6.png)
 
-- **Recherche avec projection (Filtre : Benali) :**
-![Projection](screens/05_Find_Benali_Projection.png)
+- **Recherche par analyste avec projection des champs :**
+![Recherche Analyste](screens/05_Recherche_Analyste_Projection.png)
 
-- **Utilisation des opérateurs `$gte` et `$lte` (Scores entre 7 et 9) :**
-![Opérateurs](screens/06_Find_Score_7_9_Operators.png)
+- **Filtrage par score de menace (entre 7 et 9) :**
+![Filtre Score](screens/06_Filtre_Score_Menace_7_9.png)
 
-- **Extraction des tags distincts :**
-![Distinct](screens/07_Distinct_Tags_List.png)
+- **Extraction de la liste des tags distincts :**
+![Tags Distincts](screens/07_Liste_Tags_Distincts.png)
 
-### 4. Indexation et Performance
-Optimisation des recherches via la création d'index.
+### 4. Indexation
+Optimisation des performances de recherche.
 
-- **Création d'un index de texte :**
-![Index Texte](screens/08_Create_Text_Index.png)
+- **Création d'un index textuel sur la description :**
+![Index Textuel](screens/08_Creation_Index_Textuel.png)
 
-- **Indexation sur l'IP source :**
-![Index IP](screens/15_Index_Source_IP.png)
+### 5. Analyse de Données (Agrégation)
+Utilisation du framework d'agrégation pour extraire des statistiques.
 
-### 5. Agrégation Avancée
-Analyse des données à l'aide du framework d'agrégation (`$group`, `$unwind`, `$lookup`).
+- **Nombre d'alertes par analyste :**
+![Agrégat Analyste](screens/09_Agregat_Nombre_Alertes_Analyste.png)
 
-- **Groupement par Analyste :**
-![Group By Analyste](screens/09_Aggregate_Group_By_Analyste.png)
+- **Nombre d'alertes par tag (utilisation de `$unwind`) :**
+![Agrégat Tag](screens/10_Agregat_Nombre_Alertes_Tag.png)
 
-- **Désassemblage des tags (`$unwind`) et groupement :**
-![Unwind Tags](screens/10_Aggregate_Unwind_Group_Tags.png)
+- **Jointure avec la collection `signatures` (utilisation de `$lookup`) :**
+![Agrégat Lookup](screens/16_Agregat_Lookup_Jointure_Signatures.png)
 
-- **Jointure entre collections via `$lookup` :**
-![Lookup Join](screens/14_Aggregate_Lookup_Join.png)
+### 6. Mises à Jour et Validation de Schéma
+Gestion du cycle de vie des alertes et contrôle de l'intégrité des données.
 
-### 6. Mise à jour et Validation
-Gestion de l'intégrité des données et mises à jour groupées.
+- **Mise à jour en masse du statut des intrusions :**
+![Mise à jour Statut](screens/11_Mise_A_Jour_Statut_En_Cours.png)
 
-- **Mise à jour en masse du statut :**
-![UpdateMany](screens/11_UpdateMany_Status_En_Cours.png)
+- **Échec de validation : Sévérité invalide (hors enum) :**
+![Échec Sévérité](screens/12_Validation_Echec_Severity_Invalide.png)
 
-- **Test de validation de schéma (Erreur de mode strict) :**
-![Validation Error](screens/12_Validation_Schema_Strict_Error.png)
+- **Échec de validation : Champs obligatoires manquants :**
+![Échec Champs](screens/13_Validation_Echec_Champs_Manquants.png)
 
-- **Validation avec action "warn" (Succès avec avertissement) :**
-![Validation Warn](screens/13_Validation_Action_Warn_Success.png)
+- **Échec de validation : Score hors limites :**
+![Échec Score](screens/14_Validation_Echec_Score_Hors_Limites.png)
 
-### 7. Nettoyage
-Suppression des documents obsolètes.
-
-- **Suppression des alertes résolues :**
-![DeleteMany](screens/16_DeleteMany_Alertes_Resolu.png)
+- **Création d'une collection avec avertissement (`validationAction: "warn"`) :**
+![Validation Warn](screens/15_Creation_Collection_Validation_Warn.png)
 
 ---
-*Réalisé dans le cadre du module Big Data - ENSA.*
+*Réalisé dans le cadre du module Big Data.*
