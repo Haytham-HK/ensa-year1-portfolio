@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  localstack:
+    # Use the community image by default for GitHub portability
+    image: localstack/localstack:latest
+    ports:
+      - "4566:4566"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    environment:
+      - SERVICES=iam,s3,sts
+      # Uncomment and add your token if you have a LocalStack Pro license
+      # - LOCALSTACK_AUTH_TOKEN=${LOCALSTACK_AUTH_TOKEN:-}
+      - USE_SSL=1
+      - ENFORCE_IAM=1
+      - IAM_SOFT_MODE=0

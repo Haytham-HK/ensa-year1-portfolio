@@ -1,88 +1,80 @@
-# ALOT: AI-driven Lattice Optimization Tool
+# Cloud IAM & S3 Security Mini-Project
 
-**ALOT** is a research-focused mini-project that leverages Machine Learning to optimize lattice reduction algorithms in cryptography. By predicting the performance (runtime and quality) of algorithms like **LLL** and **BKZ**, it recommends the most efficient strategy for a given lattice dimension and time constraint.
+A practical demonstration of AWS Identity and Access Management (IAM) and S3 security best practices using LocalStack. This project illustrates the **Principle of Least Privilege** by setting up a restricted environment where users must assume specific roles to perform authorized actions.
 
-Developed as part of the Cloud Computing & Virtualization module (CI IACS, 2026).
+## 🚀 Overview
 
----
+This project simulates a real-world AWS environment locally. It automates the creation of:
+1.  **IAM Users**: A base user with minimal permissions.
+2.  **IAM Roles**: A specialized "Read-Only" role for S3 access.
+3.  **Trust Policies**: Rules defining who can assume the role.
+4.  **Permission Policies**: Fine-grained JSON policies controlling S3 access.
+5.  **S3 Buckets**: Secure storage for testing permissions.
 
+## 🛠 Technologies Used
 
-## Key Features
-- **Data Collection:** Automated generation of synthetic lattices and performance profiling using `fpylll`.
-- **Machine Learning Models:** Two **Random Forest Regressors** to predict:
-  - **Runtime:** Expected duration of the reduction ($R^2 \approx 0.77$).
-  - **Quality:** Final norm of the shortest vector found ($R^2 \approx 0.99$).
-- **Smart Recommender:** Suggests the optimal algorithm (LLL/BKZ) and parameters ($\delta$ for LLL, $\beta$ for BKZ) based on user-defined time limits.
-- **Real-time Validation:** Execute recommended reductions on live lattices to verify AI predictions.
+-   **[LocalStack](https://localstack.cloud/)**: A fully functional local AWS cloud stack.
+-   **[Docker](https://www.docker.com/) & Docker Compose**: For container orchestration of the cloud environment.
+-   **[AWS CLI](https://aws.amazon.com/cli/)**: To interact with the simulated cloud services.
+-   **[jq](https://stedolan.github.io/jq/)**: A lightweight command-line JSON processor for script automation.
+-   **Bash Scripting**: For automated setup, testing, and teardown workflows.
+-   **JSON (AWS IAM Policies)**: For defining security rules and trust relationships.
 
----
+## 📁 Project Structure
 
-## Project Structure
-- `app.py`: Main CLI application (ALOT).
-- `lattice_optimizer.py`: Core logic for strategy recommendation and model loading.
-- `model_trainer.py`: Script to train the Random Forest models from collected data.
-- `data_collector.py`: Profiling script to generate the dataset using `fpylll`.
-- `lattice_data.csv`: The profiling dataset used for training.
-- `*.pkl`: Serialized pre-trained AI models.
-- `model_performance.png`: Visualization of the model's prediction accuracy.
-- `rapport.tex`: LaTeX source for the project report.
+-   `docker-compose.yml`: LocalStack configuration (IAM, S3, STS).
+-   `setup.sh`: Automates the creation of users, roles, policies, and buckets.
+-   `start.sh`: Starts the LocalStack environment in the background.
+-   `stop.sh`: Gracefully stops and cleans up the Docker environment.
+-   `test.sh`: Performs a basic health check on S3 services.
+-   `iam_test.sh`: The core demonstration script that simulates assuming a role and testing permission boundaries.
+-   `*-policy.json`: JSON documents defining IAM trust and permission policies.
 
----
-
-## Installation & Setup
+## 🚦 Getting Started
 
 ### Prerequisites
-- Python 3.10+
-- **`fpylll`**: Requires system-level dependencies (GMP, MPFR, FPLLL). On Ubuntu:
-  ```bash
-  sudo apt-get install libgmp-dev libmpfr-dev libfplll-dev
-  ```
 
-### Installation
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/your-username/lattice-optimization-ai.git
-   cd lattice-optimization-ai
-   ```
+-   Docker & Docker Compose
+-   AWS CLI
+-   `jq` installed (`sudo apt install jq` on Ubuntu)
 
-2. **Create a virtual environment:**
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
+### Step 1: Start the Environment
 
-3. **Install dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
----
-
-## Usage
-
-### 1. Run the Tool (ALOT)
-Launch the interactive CLI to get recommendations and test reductions:
 ```bash
-python app.py
+chmod +x *.sh
+./start.sh
 ```
 
-### 2. Train Models (Optional)
-If you wish to update the models with the existing data:
+### Step 2: Configure the Cloud Resources
+
 ```bash
-python model_trainer.py
+./setup.sh
+```
+*Note: This script will output the Access Key ID and Secret Access Key for the `read-only-user`.*
+
+### Step 3: Run the IAM Security Test
+
+The `iam_test.sh` script demonstrates the role-assumption workflow:
+1.  It starts as a user with **no direct S3 access**.
+2.  It **assumes a role** to gain temporary credentials.
+3.  It proves that it can **Read** (List) files but **Cannot Write** (Upload) files, confirming the security policy is active.
+
+```bash
+./iam_test.sh
 ```
 
-### 3. Collect New Data (Optional)
-To generate a new dataset from scratch:
+### Step 4: Cleanup
+
 ```bash
-python data_collector.py
+./stop.sh
 ```
 
+## 🔒 Security Concepts Demonstrated
+
+-   **Principle of Least Privilege**: Users are given only the permissions they need for their task.
+-   **Role-Based Access Control (RBAC)**: Using roles instead of direct user permissions for better scalability and security.
+-   **Temporary Credentials**: Using AWS STS (Security Token Service) to get short-lived access.
+-   **Policy Evaluation**: Understanding how AWS evaluates 'Allow' and 'Deny' statements.
+
 ---
-
-## Performance
-The models achieve high accuracy on standard lattice reduction tasks:
-
-![Model Performance](docs/model_performance.png)
-
----
+*Created as part of the Cloud Computing & Virtualisation Module.*

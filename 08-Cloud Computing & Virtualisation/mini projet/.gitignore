@@ -20,3 +20,4 @@ Thumbs.db
 
 # Visualization outputs
 # model_performance.png
+.env.credentials
