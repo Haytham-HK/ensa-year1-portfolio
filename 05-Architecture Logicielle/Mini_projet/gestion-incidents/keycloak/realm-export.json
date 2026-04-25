@@ -1,0 +1,84 @@
+{
+  "realm": "incident-realm",
+  "enabled": true,
+  "roles": {
+    "realm": [
+      {
+        "name": "ADMIN",
+        "description": "Administrator role"
+      },
+      {
+        "name": "CLIENT",
+        "description": "Client role"
+      }
+    ]
+  },
+  "clients": [
+    {
+      "clientId": "admin-dashboard",
+      "enabled": true,
+      "publicClient": true,
+      "redirectUris": [
+        "http://localhost:3003/*",
+        "http://localhost:3000/*"
+      ],
+      "webOrigins": [
+        "http://localhost:3003",
+        "http://localhost:3000"
+      ],
+      "standardFlowEnabled": true,
+      "directAccessGrantsEnabled": true
+    },
+    {
+      "clientId": "client-app",
+      "enabled": true,
+      "publicClient": true,
+      "redirectUris": [
+        "http://localhost:3000/*",
+        "http://localhost:3003/*"
+      ],
+      "webOrigins": [
+        "http://localhost:3000",
+        "http://localhost:3003"
+      ],
+      "standardFlowEnabled": true,
+      "directAccessGrantsEnabled": true
+    }
+  ],
+  "users": [
+    {
+      "username": "admin",
+      "enabled": true,
+      "email": "admin@ensa.com",
+      "firstName": "Admin",
+      "lastName": "Ensa",
+      "credentials": [
+        {
+          "type": "password",
+          "value": "admin",
+          "temporary": false
+        }
+      ],
+      "realmRoles": [
+        "ADMIN"
+      ]
+    },
+    {
+      "username": "client",
+      "enabled": true,
+      "email": "client@ensa.com",
+      "firstName": "Client",
+      "lastName": "Ensa",
+      "credentials": [
+        {
+          "type": "password",
+          "value": "client",
+          "temporary": false
+        }
+      ],
+      "realmRoles": [
+        "CLIENT"
+      ]
+    }
+  ]
+}

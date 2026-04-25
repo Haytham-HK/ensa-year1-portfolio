@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: chat-service
+  config:
+    import: "configserver:"
+server:
+  port: 8084

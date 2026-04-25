@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: incident-service
+  config:
+    import: "configserver:"

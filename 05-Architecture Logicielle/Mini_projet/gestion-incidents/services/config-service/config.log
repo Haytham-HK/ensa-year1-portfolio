@@ -1,0 +1,71 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------------< [0;36mcom.ensa:config-service[0;1m >-----------------------[m
+[[1;34mINFO[m] [1mBuilding config-service 0.0.1-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m>>> [0;32mspring-boot-maven-plugin:4.0.2:run[m [1m(default-cli)[0;1m > [0;1mtest-compile[m @ [36mconfig-service[0;1m >>>[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:resources[m [1m(default-resources)[m @ [36mconfig-service[0;1m ---[m
+[[1;34mINFO[m] Copying 1 resource from src/main/resources to target/classes
+[[1;34mINFO[m] Copying 0 resource from src/main/resources to target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.14.1:compile[m [1m(default-compile)[m @ [36mconfig-service[0;1m ---[m
+[[1;34mINFO[m] Recompiling the module because of [1mchanged source code[m.
+[[1;34mINFO[m] Compiling 1 source file with javac [debug parameters release 17] to target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:testResources[m [1m(default-testResources)[m @ [36mconfig-service[0;1m ---[m
+[[1;34mINFO[m] skip non existing resourceDirectory /home/hk/Documents/mini projet(gestion-incidents)/gestion-incidents/services/config-service/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.14.1:testCompile[m [1m(default-testCompile)[m @ [36mconfig-service[0;1m ---[m
+[[1;34mINFO[m] Recompiling the module because of [1mchanged dependency[m.
+[[1;34mINFO[m] Compiling 1 source file with javac [debug parameters release 17] to target/test-classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m<<< [0;32mspring-boot-maven-plugin:4.0.2:run[m [1m(default-cli)[0;1m < [0;1mtest-compile[m @ [36mconfig-service[0;1m <<<[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspring-boot-maven-plugin:4.0.2:run[m [1m(default-cli)[m @ [36mconfig-service[0;1m ---[m
+[[1;34mINFO[m] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.2)
+
+2026-02-22T14:15:13.414Z  INFO 571642 --- [config-service] [           main] c.ensa.config.ConfigServiceApplication   : Starting ConfigServiceApplication using Java 17.0.18 with PID 571642 (/home/hk/Documents/mini projet(gestion-incidents)/gestion-incidents/services/config-service/target/classes started by hk in /home/hk/Documents/mini projet(gestion-incidents)/gestion-incidents/services/config-service)
+2026-02-22T14:15:13.420Z  INFO 571642 --- [config-service] [           main] c.ensa.config.ConfigServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-02-22T14:15:16.157Z  INFO 571642 --- [config-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=5ad5ce0d-65a0-3967-abe5-fa990d01fbd2
+2026-02-22T14:15:16.619Z  INFO 571642 --- [config-service] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8888 (http)
+2026-02-22T14:15:16.647Z  INFO 571642 --- [config-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-22T14:15:16.648Z  INFO 571642 --- [config-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-02-22T14:15:16.721Z  INFO 571642 --- [config-service] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3095 ms
+2026-02-22T14:15:19.222Z  INFO 571642 --- [config-service] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-02-22T14:15:19.388Z  INFO 571642 --- [config-service] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8888 (http) with context path '/'
+2026-02-22T14:15:19.459Z  INFO 571642 --- [config-service] [           main] c.ensa.config.ConfigServiceApplication   : Started ConfigServiceApplication in 7.902 seconds (process running for 9.498)
+2026-02-22T14:15:25.480Z  INFO 571642 --- [config-service] [nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-22T14:15:25.480Z  INFO 571642 --- [config-service] [nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-02-22T14:15:25.482Z  INFO 571642 --- [config-service] [nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-02-22T14:15:25.752Z  INFO 571642 --- [config-service] [nio-8888-exec-1] .c.s.e.MultipleJGitEnvironmentRepository : Cannot pull from remote null, the working tree is not clean.
+2026-02-22T14:15:25.789Z  WARN 571642 --- [config-service] [nio-8888-exec-1] .c.s.e.MultipleJGitEnvironmentRepository : Could not merge remote for main remote: null
+2026-02-22T14:15:25.793Z  WARN 571642 --- [config-service] [nio-8888-exec-1] .c.s.e.MultipleJGitEnvironmentRepository : The local repository is dirty or ahead of origin. Resetting it to origin/main.
+2026-02-22T14:15:25.800Z  WARN 571642 --- [config-service] [nio-8888-exec-1] .c.s.e.MultipleJGitEnvironmentRepository : Could not reset to remote for main (current ref=refs/remotes/origin/main), remote: null
+2026-02-22T14:15:25.826Z  INFO 571642 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/home/hk/Documents/mini projet(gestion-incidents)/config-repo/incident-service.yml]' via location 'file:/home/hk/Documents/mini%20projet(gestion-incidents)/config-repo/'
+2026-02-22T14:15:25.826Z  INFO 571642 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/home/hk/Documents/mini projet(gestion-incidents)/config-repo/application.yml]' via location 'file:/home/hk/Documents/mini%20projet(gestion-incidents)/config-repo/'
+2026-02-22T14:16:04.732Z  INFO 571642 --- [config-service] [nio-8888-exec-4] .c.s.e.MultipleJGitEnvironmentRepository : Cannot pull from remote null, the working tree is not clean.
+2026-02-22T14:16:04.742Z  WARN 571642 --- [config-service] [nio-8888-exec-4] .c.s.e.MultipleJGitEnvironmentRepository : Could not merge remote for main remote: null
+2026-02-22T14:16:04.746Z  WARN 571642 --- [config-service] [nio-8888-exec-4] .c.s.e.MultipleJGitEnvironmentRepository : The local repository is dirty or ahead of origin. Resetting it to origin/main.
+2026-02-22T14:16:04.747Z  WARN 571642 --- [config-service] [nio-8888-exec-4] .c.s.e.MultipleJGitEnvironmentRepository : Could not reset to remote for main (current ref=refs/remotes/origin/main), remote: null
+2026-02-22T14:16:04.763Z  INFO 571642 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/home/hk/Documents/mini projet(gestion-incidents)/config-repo/gateway-service.yml]' via location 'file:/home/hk/Documents/mini%20projet(gestion-incidents)/config-repo/'
+2026-02-22T14:16:04.763Z  INFO 571642 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/home/hk/Documents/mini projet(gestion-incidents)/config-repo/application.yml]' via location 'file:/home/hk/Documents/mini%20projet(gestion-incidents)/config-repo/'
+2026-02-22T14:16:44.336Z  INFO 571642 --- [config-service] [nio-8888-exec-2] .c.s.e.MultipleJGitEnvironmentRepository : Cannot pull from remote null, the working tree is not clean.
+2026-02-22T14:16:44.356Z  WARN 571642 --- [config-service] [nio-8888-exec-2] .c.s.e.MultipleJGitEnvironmentRepository : Could not merge remote for main remote: null
+2026-02-22T14:16:44.361Z  WARN 571642 --- [config-service] [nio-8888-exec-2] .c.s.e.MultipleJGitEnvironmentRepository : The local repository is dirty or ahead of origin. Resetting it to origin/main.
+2026-02-22T14:16:44.365Z  WARN 571642 --- [config-service] [nio-8888-exec-2] .c.s.e.MultipleJGitEnvironmentRepository : Could not reset to remote for main (current ref=refs/remotes/origin/main), remote: null
+2026-02-22T14:16:44.395Z  INFO 571642 --- [config-service] [nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/home/hk/Documents/mini projet(gestion-incidents)/config-repo/incident-service.yml]' via location 'file:/home/hk/Documents/mini%20projet(gestion-incidents)/config-repo/'
+2026-02-22T14:16:44.396Z  INFO 571642 --- [config-service] [nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/home/hk/Documents/mini projet(gestion-incidents)/config-repo/application.yml]' via location 'file:/home/hk/Documents/mini%20projet(gestion-incidents)/config-repo/'
+2026-02-22T14:28:10.545Z  INFO 571642 --- [config-service] [ionShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-22T14:28:10.550Z  INFO 571642 --- [config-service] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete

@@ -1,0 +1,234 @@
+services:
+  gateway-service:
+    build:
+      context: ./services/gateway-service
+      dockerfile: Dockerfile
+    container_name: gateway-service
+    ports:
+      - "8080:8080"
+    networks:
+      - incident-network
+    environment:
+      - SPRING_CLOUD_CONFIG_URI=http://config-server:8888
+    restart: always
+    depends_on:
+      - config-server
+      - eureka-server
+
+  eureka-server:
+    build:
+      context: ./services/eureka-server
+      dockerfile: Dockerfile
+    container_name: eureka-server
+    ports:
+      - "8761:8761"
+    networks:
+      - incident-network
+    environment:
+      - SPRING_CLOUD_CONFIG_URI=http://config-server:8888
+    restart: always
+    depends_on:
+      - config-server
+
+  config-server:
+    build:
+      context: ./services/config-service
+      dockerfile: Dockerfile
+    container_name: config-server
+    ports:
+      - "8888:8888"
+    volumes:
+      - ../config-repo:/config-repo
+    environment:
+      - SPRING_CLOUD_CONFIG_SERVER_GIT_DEFAULT_LABEL=master
+    networks:
+      - incident-network
+    restart: always
+
+  incident-service:
+    build:
+      context: ./services/incident-service
+      dockerfile: Dockerfile
+    container_name: incident-service
+    ports:
+      - "8082:8081"
+    networks:
+      - incident-network
+    environment:
+      SPRING_PROFILES_ACTIVE: default
+      SPRING_CLOUD_CONFIG_URI: http://config-server:8888
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+    restart: always
+    depends_on:
+      - config-server
+      - eureka-server
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:24.0.2
+    container_name: keycloak
+    command: 
+      - "start-dev"
+      - "--import-realm"
+    environment:
+      - KEYCLOAK_ADMIN=admin
+      - KEYCLOAK_ADMIN_PASSWORD=admin
+    volumes:
+      - ./keycloak/realm-export.json:/opt/keycloak/data/import/realm-export.json
+    ports:
+      - "8180:8080"
+    networks:
+      - incident-network
+    restart: always
+
+  user-service:
+    build:
+      context: ./services/user-service
+      dockerfile: Dockerfile
+    container_name: user-service
+    ports:
+      - "8086:8086"
+    networks:
+      - incident-network
+    environment:
+      SPRING_PROFILES_ACTIVE: default
+      SPRING_CLOUD_CONFIG_URI: http://config-server:8888
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+    restart: always
+    depends_on:
+      - config-server
+      - eureka-server
+
+  comment-service:
+    build:
+      context: ./services/comment-service
+      dockerfile: Dockerfile
+    container_name: comment-service
+    ports:
+      - "8083:8083"
+    networks:
+      - incident-network
+    environment:
+      SPRING_PROFILES_ACTIVE: default
+      SPRING_CLOUD_CONFIG_URI: http://config-server:8888
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+    restart: always
+    depends_on:
+      - config-server
+      - eureka-server
+
+  notification-service:
+    build:
+      context: ./services/notification-service
+      dockerfile: Dockerfile
+    container_name: notification-service
+    ports:
+      - "8084:8084"
+    networks:
+      - incident-network
+    environment:
+      SPRING_PROFILES_ACTIVE: default
+      SPRING_CLOUD_CONFIG_URI: http://config-server:8888
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+    restart: always
+    depends_on:
+      - config-server
+      - eureka-server
+
+  chat-service:
+    build:
+      context: ./services/chat-service
+      dockerfile: Dockerfile
+    container_name: chat-service
+    ports:
+      - "8085:8085"
+    networks:
+      - incident-network
+    environment:
+      SPRING_PROFILES_ACTIVE: default
+      SPRING_CLOUD_CONFIG_URI: http://config-server:8888
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+    restart: always
+    depends_on:
+      - config-server
+      - eureka-server
+
+  ai-priority-service:
+    build:
+      context: ./services/ai-priority-service
+      dockerfile: Dockerfile
+    container_name: ai-priority-service
+    ports:
+      - "5001:5000"
+    networks:
+      - incident-network
+    restart: always
+
+  minio:
+    image: minio/minio
+    container_name: minio
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    command: server /data --console-address ":9001"
+    networks:
+      - incident-network
+    restart: always
+
+  postgres-db:
+    image: postgres:15
+    container_name: postgres-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: incident_db
+    ports:
+      - "5433:5432"
+    networks:
+      - incident-network
+    restart: always
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    networks:
+      - incident-network
+    restart: always
+
+  admin-dashboard:
+    build:
+      context: ./frontend/admin-dashboard
+      dockerfile: Dockerfile
+    container_name: admin-dashboard
+    ports:
+      - "3003:80"
+    networks:
+      - incident-network
+    restart: always
+    depends_on:
+      - gateway-service
+
+  client-app:
+    build:
+      context: ./frontend/client-app
+      dockerfile: Dockerfile
+    container_name: client-app
+    ports:
+      - "3000:80"
+    networks:
+      - incident-network
+    restart: always
+    depends_on:
+      - gateway-service
+
+networks:
+  incident-network:
+    driver: bridge

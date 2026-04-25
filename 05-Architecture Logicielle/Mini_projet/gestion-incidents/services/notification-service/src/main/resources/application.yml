@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: notification-service
+  config:
+    import: "configserver:"
+server:
+  port: 8085

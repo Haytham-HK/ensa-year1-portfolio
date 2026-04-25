@@ -1,0 +1,23 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-service
+  cloud:
+    config:
+      enabled: false  # Disable config client for the server itself
+      server:
+        git:
+          uri: file:///config-repo
+          default-label: main
+          clone-on-start: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: always
